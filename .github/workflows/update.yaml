@@ -25,7 +25,7 @@ jobs:
     - name: Commit changes
       run: |
         git status
-	echo "git status done."
+        echo "git status done."
         git config --global user.name 'GitHub Action - Harry Ying'
         git config --global user.email 'LEXUGEyky@outlook.com'
         git commit -am "Update flake.lock - automated"
