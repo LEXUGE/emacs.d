@@ -28,5 +28,5 @@ jobs:
         echo "git status done."
         git config --global user.name 'GitHub Action - Harry Ying'
         git config --global user.email 'LEXUGEyky@outlook.com'
-        git commit -am "Update flake.lock - automated"
-        git push || true
+        git diff-index --quiet HEAD || git commit -am "Update flake.lock - automated"
+        git push
