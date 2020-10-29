@@ -7,4 +7,4 @@
 
 (setq lsp-rust-server 'rust-analyzer)
 
-(provide 'lang-nix)
+(provide 'lang-rust)
