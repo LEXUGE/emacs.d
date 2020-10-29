@@ -5,4 +5,6 @@
   :config
   (setq rust-format-on-save t))
 
+(setq lsp-rust-server 'rust-analyzer)
+
 (provide 'lang-nix)
