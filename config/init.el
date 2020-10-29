@@ -19,6 +19,8 @@
 (require 'ext-org)
 (require 'ext-tex)
 
+(require 'lang-lsp)
 (require 'lang-nix)
 (require 'lang-haskell)
+(require 'lang-rust)
 (require 'lang-markdown)
