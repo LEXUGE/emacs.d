@@ -22,4 +22,8 @@
 (require 'lang-nix)
 (require 'lang-haskell)
 (require 'lang-rust)
+(require 'lang-json)
 (require 'lang-markdown)
+
+(provide 'init)
+;;; init.el ends here
