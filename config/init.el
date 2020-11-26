@@ -23,6 +23,7 @@
 (require 'lang-haskell)
 (require 'lang-rust)
 (require 'lang-json)
+(require 'lang-yaml)
 (require 'lang-markdown)
 
 (provide 'init)
