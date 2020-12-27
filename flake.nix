@@ -4,7 +4,8 @@
   inputs = {
     nixos.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    #    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    emacs-overlay.url = "github:collares/emacs-overlay/update-elpa";
   };
 
   outputs = { self, nixos, emacs-overlay, flake-utils }@inputs:
@@ -36,8 +37,7 @@
     } // (flake-utils.lib.eachDefaultSystem (system: {
       packages = {
         ash-emacs-source = (importer [ self.overlay ] system).ash-emacs-source;
-        "ash-emacs-${system}" =
-          (importer [ self.overlay ] system)."ash-emacs-${system}";
+        "ash-emacs" = (importer [ self.overlay ] system)."ash-emacs-${system}";
       };
     })));
 }
