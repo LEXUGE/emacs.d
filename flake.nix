@@ -4,8 +4,7 @@
   inputs = {
     nixos.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    #    emacs-overlay.url = "github:nix-community/emacs-overlay";
-    emacs-overlay.url = "github:collares/emacs-overlay/update-elpa";
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
   };
 
   outputs = { self, nixos, emacs-overlay, flake-utils }@inputs:

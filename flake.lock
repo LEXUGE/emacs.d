@@ -2,16 +2,15 @@
   "nodes": {
     "emacs-overlay": {
       "locked": {
-        "lastModified": 1609288542,
-        "narHash": "sha256-gSEwYhzpYaSPA6vIgOiTF3uw1zWHYaHm/bTAM5wVkx4=",
-        "owner": "collares",
+        "lastModified": 1609636146,
+        "narHash": "sha256-yCNG8llwOjKdi029iw2T+sTLdsjo0lZzgMZaqod8sDk=",
+        "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "5915e40bf9caeacf8d5240616fb36b71f1e65fb8",
+        "rev": "82a9f26161e10691233cf757bddfd9d7c70ac940",
         "type": "github"
       },
       "original": {
-        "owner": "collares",
-        "ref": "update-elpa",
+        "owner": "nix-community",
         "repo": "emacs-overlay",
         "type": "github"
       }
