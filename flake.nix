@@ -33,10 +33,12 @@
                 ash-emacs-source =
                   (prev.callPackage ./pkgs/ash-emacs-source.nix { });
               }));
-    } // (flake-utils.lib.eachDefaultSystem (system: {
+    } // (flake-utils.lib.eachDefaultSystem (system: rec {
       packages = {
         ash-emacs-source = (importer [ self.overlay ] system).ash-emacs-source;
         "ash-emacs" = (importer [ self.overlay ] system)."ash-emacs-${system}";
       };
+
+      checks = packages;
     })));
 }
