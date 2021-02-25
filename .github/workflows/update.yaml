@@ -21,7 +21,6 @@ jobs:
           experimental-features = nix-command flakes
 
     - uses: cachix/cachix-action@v8
-      if: ${{ github.event_name == 'push' }}
       with:
         name: lexuge
         authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
