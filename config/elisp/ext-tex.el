@@ -25,9 +25,6 @@
 (use-package pdf-tools
   :mode  ("\\.pdf\\'" . pdf-view-mode)
   :config
-  (setq-default pdf-view-display-size 'fit-page)
-  (setq pdf-annot-activate-created-annotations t)
-  (pdf-tools-install :no-query)
-  (require 'pdf-occur))
+  (pdf-tools-install :no-query))
 
 (provide 'ext-tex)
