@@ -1,12 +1,10 @@
 (use-package tex
   :defer t
   :ensure auctex
-  :mode (("\\.tex\\'" . LaTeX-mode))
-  :config
-  (setq-default TeX-engine 'xetex))
+  :mode (("\\.tex\\'" . LaTeX-mode)))
 
 (use-package cdlatex
-  :hook ((latex-mode LaTeX-mode) . turn-on-cdlatex)
+  :hook ((latex-mode LaTeX-mode markdown-mode) . turn-on-cdlatex)
   :config
   (setq cdlatex-command-alist
       '(("sum" "Insert \\sum\\limits_{}^{}"
@@ -19,5 +17,11 @@
 	 "" cdlatex-environment ("aligned") t t)
         ("prd" "Insert \\prod_{}^{}"
          "\\prod_{?}^{}" cdlatex-position-cursor nil nil t))))
+
+(use-package latex-preview-pane
+  :hook ((latex-mode LaTeX-mode) . latex-preview-pane-mode)
+  )
+
+(use-package pdf-tools)
 
 (provide 'ext-tex)
