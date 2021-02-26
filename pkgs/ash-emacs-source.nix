@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
   pname = "ash-emacs-source";
-  version = "2020-10-07";
+  version = "git";
 
   src = ../config;
 
