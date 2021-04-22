@@ -44,8 +44,7 @@
   ("C-s-f" . windmove-right))
 
 (use-package flycheck
-  :ensure nil
-  :init (global-flycheck-mode))
+  :ensure nil)
 
 ;; Recent files
 (use-package recentf
