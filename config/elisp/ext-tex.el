@@ -1,7 +1,8 @@
 (use-package tex
   :defer t
   :ensure auctex
-  :mode (("\\.tex\\'" . LaTeX-mode)))
+  :mode (("\\.tex\\'" . LaTeX-mode))
+  :config (setq TeX-engine 'luatex))
 
 (use-package cdlatex
   :hook ((latex-mode LaTeX-mode markdown-mode) . turn-on-cdlatex)
@@ -20,6 +21,8 @@
 
 (use-package latex-preview-pane
   :hook ((latex-mode LaTeX-mode) . latex-preview-pane-mode)
+  :config
+  (setq pdf-latex-command "latexmk")
   )
 
 (use-package pdf-tools
