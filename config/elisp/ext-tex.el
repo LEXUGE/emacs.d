@@ -18,12 +18,6 @@
         ("prd" "Insert \\prod_{}^{}"
          "\\prod_{?}^{}" cdlatex-position-cursor nil nil t))))
 
-(use-package latex-preview-pane
-  :hook ((latex-mode LaTeX-mode) . latex-preview-pane-mode)
-  :config
-  (setq pdf-latex-command "latexmk")
-  )
-
 (use-package pdf-tools
   :mode  ("\\.pdf\\'" . pdf-view-mode)
   :config
