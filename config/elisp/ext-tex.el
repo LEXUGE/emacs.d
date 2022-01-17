@@ -1,8 +1,7 @@
 (use-package tex
   :defer t
   :ensure auctex
-  :mode (("\\.tex\\'" . LaTeX-mode))
-  :config (setq TeX-engine 'luatex))
+  :mode (("\\.tex\\'" . LaTeX-mode)))
 
 (use-package cdlatex
   :hook ((latex-mode LaTeX-mode markdown-mode) . turn-on-cdlatex)
