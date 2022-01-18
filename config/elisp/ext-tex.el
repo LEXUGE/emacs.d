@@ -1,7 +1,8 @@
 (use-package tex
-  :defer t
   :ensure auctex
-  :mode (("\\.tex\\'" . LaTeX-mode)))
+  :mode (("\\.tex\\'" . LaTeX-mode))
+  :config
+  (setq-default TeX-engine 'luatex))
 
 (use-package cdlatex
   :hook ((latex-mode LaTeX-mode markdown-mode) . turn-on-cdlatex)
@@ -9,6 +10,8 @@
   (setq cdlatex-command-alist
       '(("sum" "Insert \\sum\\limits_{}^{}"
          "\\sum\\limits_{?}^{}" cdlatex-position-cursor nil nil t)
+	("int" "Insert \\int\\limits_{}^{}"
+         "\\int\\limits_{?}^{}" cdlatex-position-cursor nil nil t)
 	("tt" "Insert \\text{}"
 	 "\\text{?}" cdlatex-position-cursor nil nil t)
 	("apr" "Insert \\approx{}"
