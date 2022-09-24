@@ -15,7 +15,7 @@
           overlays = overlays;
         });
     in ({
-      overlay = with nixos.lib;
+      overlays.default = with nixos.lib;
         let
           concatEmacsConfig = dir:
             foldl (a: b: a + b) "" (attrsets.mapAttrsToList
@@ -35,8 +35,8 @@
               }));
     } // (flake-utils.lib.eachDefaultSystem (system: rec {
       packages = {
-        ash-emacs-source = (importer [ self.overlay ] system).ash-emacs-source;
-        "ash-emacs" = (importer [ self.overlay ] system)."ash-emacs-${system}";
+        ash-emacs-source = (importer [ self.overlays.default ] system).ash-emacs-source;
+        "ash-emacs" = (importer [ self.overlays.default ] system)."ash-emacs-${system}";
       };
 
       checks = packages;
