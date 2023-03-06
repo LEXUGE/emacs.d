@@ -18,6 +18,8 @@
 	 "\\text{?}" cdlatex-position-cursor nil nil t)
 	("bf" "Insert \\mathbf{}"
 	 "\\mathbf{?}" cdlatex-position-cursor nil nil t)
+	("cal" "Insert \\mathcal{}"
+	 "\\mathcal{?}" cdlatex-position-cursor nil nil t)
 	("bb" "Insert \\mathbb{}"
 	 "\\mathbb{?}" cdlatex-position-cursor nil nil t)
 	("apr" "Insert \\approx{}"
