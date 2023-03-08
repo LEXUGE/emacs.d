@@ -1,7 +1,6 @@
-(use-package lsp-python-ms
-  :ensure t
+(use-package lsp-pyright
   :hook (python-mode . (lambda ()
-                         (require 'lsp-python-ms)
-                         (lsp)))
-  :init
-  (setq lsp-python-ms-executable (executable-find "python-language-server")))
+                          (require 'lsp-pyright)
+                          (lsp-deferred))))
+
+(provide 'lang-python)

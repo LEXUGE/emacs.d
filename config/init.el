@@ -21,6 +21,7 @@
 
 (require 'lang-nix)
 (require 'lang-rust)
+(require 'lang-python)
 (require 'lang-json)
 (require 'lang-yaml)
 (require 'lang-markdown)
