@@ -27,7 +27,7 @@
             ((importer [ emacs-overlay.overlay ]
               system).emacsWithPackagesFromUsePackage {
                 config = concatEmacsConfig ./config/elisp;
-                package = (importer [ emacs-overlay.overlay ] system).pkgs.emacs-gtk;
+                package = (importer [ emacs-overlay.overlay ] system).pkgs.emacs-pgtk;
                 alwaysEnsure = true;
               })) flake-utils.lib.defaultSystems)) {
                 ash-emacs-source =
