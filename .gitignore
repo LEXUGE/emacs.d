@@ -1,4 +1,5 @@
 # -*- mode: gitignore; -*-
+.pre-commit-config.yaml
 result
 
 # emacs gitignore

@@ -20,6 +20,7 @@
 (require 'ext-tex)
 
 (require 'lang-nix)
+(require 'lang-typst)
 (require 'lang-rust)
 (require 'lang-python)
 (require 'lang-json)
