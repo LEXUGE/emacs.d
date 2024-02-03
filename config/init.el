@@ -26,6 +26,7 @@
 (require 'lang-json)
 (require 'lang-yaml)
 (require 'lang-markdown)
+(require 'lang-julia)
 
 (provide 'init)
 ;;; init.el ends here
